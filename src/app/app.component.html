@@ -1,7 +1,9 @@
 <div style="width: 90%">
   <mat-tab-group mat-align-tabs="center">
     <mat-tab label="First">
-      <highcharts-chart [Highcharts]="Highcharts" [options]="chartOpts" style="display: flex"></highcharts-chart>
+    </mat-tab>
+    <mat-tab label="Second">
+      <highcharts-chart [Highcharts]="Highcharts" [options]="chartOpts" [callbackFunction]="chartCallback" style="display: flex"></highcharts-chart>
     </mat-tab>
   </mat-tab-group>
 </div>

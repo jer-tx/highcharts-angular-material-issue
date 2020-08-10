@@ -7,6 +7,11 @@ import * as Highcharts from 'highcharts';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  chartCallback: Highcharts.ChartCallbackFunction = function(chart): void {
+      setTimeout(() => {
+          chart.reflow();
+      }, 0);
+  };
   title = 'angularTabsHighcharts';
   Highcharts: typeof Highcharts = Highcharts;
   chartOpts = {
